@@ -83,9 +83,48 @@
                     </div>
                 </div>
             </div>
-            <h2 class="text-2xl font-bold text-gray-800 mb-4">Featured Products</h2>
+            
+            <h2 class="text-2xl font-bold text-gray-800 mt-8 mb-4">Blockbuster Deals</h2>
+            <div id="blockbuster-deals-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
+                <!-- Blockbuster deals will be injected here by JS -->
+            </div>
+
+            <h2 class="text-2xl font-bold text-gray-800 mt-8 mb-4">Suggested For You</h2>
+            <div id="suggested-deals-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
+                <!-- Suggested deals will be injected here by JS -->
+            </div>
+
+            <h2 class="text-2xl font-bold text-gray-800 mt-8 mb-4">Featured Products</h2>
             <div id="home-product-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
                 <!-- Products will be injected here by JS -->
+            </div>
+        </div>
+
+        <!-- 
+          ======================================
+          FASHION LANDING PAGE
+          ======================================
+        -->
+        <div id="fashion-page" class="page">
+            <div class="flex items-center justify-between mb-4">
+                <h2 class="text-3xl font-bold text-gray-800">Fashion</h2>
+                <button class="back-btn bg-blue-500 text-white font-semibold py-2 px-4 rounded-lg hover:bg-blue-600 transition-colors flex items-center space-x-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+                    <span>Back</span>
+                </button>
+            </div>
+            <div class="mb-6">
+                <!-- Sub-category navigation bar -->
+                <div class="bg-white p-3 rounded-lg shadow-sm flex justify-around items-center">
+                    <a href="#" class="fashion-subcategory-link font-semibold text-gray-700 hover:text-blue-600" data-subcategory="Men's Wear">Men's Wear</a>
+                    <a href="#" class="fashion-subcategory-link font-semibold text-gray-700 hover:text-blue-600" data-subcategory="Women's Wear">Women's Wear</a>
+                    <a href="#" class="fashion-subcategory-link font-semibold text-gray-700 hover:text-blue-600" data-subcategory="Shoes">Shoes</a>
+                    <a href="#" class="fashion-subcategory-link font-semibold text-gray-700 hover:text-blue-600" data-subcategory="Watches">Watches</a>
+                </div>
+            </div>
+            <!-- Grid to show all fashion products initially -->
+            <div id="fashion-product-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
+                <!-- Fashion products will be injected here by JS -->
             </div>
         </div>
 
@@ -97,7 +136,7 @@
         <div id="product-list-page" class="page">
              <div class="flex items-center justify-between mb-4">
                 <h2 id="product-list-title" class="text-2xl font-bold text-gray-800">Search Results</h2>
-                <button id="back-to-home-btn" class="bg-blue-500 text-white font-semibold py-2 px-4 rounded-lg hover:bg-blue-600 transition-colors flex items-center space-x-2">
+                <button class="back-btn bg-blue-500 text-white font-semibold py-2 px-4 rounded-lg hover:bg-blue-600 transition-colors flex items-center space-x-2">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
                     <span>Back</span>
                 </button>
@@ -208,7 +247,7 @@
         </div>
 
     </main>
-
+    
     <!-- 
       ======================================
       FOOTER
