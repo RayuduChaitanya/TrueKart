@@ -14,17 +14,27 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- MOCK DATA ---
     const getMockProducts = () => [
+        // Products for the "Featured" section
         { id: 1, name: 'Apple iPhone 14 Pro', category: 'Mobiles', price: 129900, rating: 4.7, reviews: 8500, image: 'https://placehold.co/400x400/3B82F6/FFFFFF?text=iPhone+14+Pro', description: 'A magical new way to interact with iPhone. Groundbreaking safety features designed to save lives. An innovative 48MP camera for mind-blowing detail.', specs: ['A16 Bionic Chip', '6.1-inch Super Retina XDR display', 'Pro camera system'] },
-        { id: 7, name: 'Samsung Galaxy S23 Ultra', category: 'Mobiles', price: 124999, rating: 4.8, reviews: 9500, image: 'https://placehold.co/400x400/1F2937/FFFFFF?text=Galaxy+S23', description: 'The epic standard in mobile. With the fastest mobile processor and an incredible camera system.', specs: ['Snapdragon 8 Gen 2 for Galaxy', '200MP Main Camera', 'Built-in S Pen'] },
-        { id: 8, name: 'OnePlus 11 5G', category: 'Mobiles', price: 56999, rating: 4.6, reviews: 7800, image: 'https://placehold.co/400x400/DC2626/FFFFFF?text=OnePlus+11', description: 'The Shape of Power. Experience the power of a flagship processor with up to 16GB of RAM.', specs: ['Snapdragon 8 Gen 2', '3rd Gen Hasselblad Camera', '120 Hz Super Fluid AMOLED'] },
-        { id: 11, name: 'Google Pixel 7 Pro', category: 'Mobiles', price: 84999, rating: 4.7, reviews: 6500, image: 'https://placehold.co/400x400/7C3AED/FFFFFF?text=Pixel+7+Pro', description: 'The all-pro Google phone. Powered by Google Tensor G2, it\'s fast and secure, with an amazing battery and camera.', specs: ['Google Tensor G2', '6.7-inch LTPO QHD+ display', '5x telephoto lens'] },
         { id: 2, name: 'Sony WH-1000XM5 Headphones', category: 'Electronics', price: 29990, rating: 4.8, reviews: 12450, image: 'https://placehold.co/400x400/10B981/FFFFFF?text=Sony+Headphones', description: 'Our best ever noise cancelling just got better. Superlative sound for a truly remarkable listening experience.', specs: ['Industry-leading noise cancellation', '30-hour battery life', 'Crystal clear hands-free calling'] },
-        { id: 3, name: 'Nike Air Max 270', category: 'Fashion', price: 12995, rating: 4.5, reviews: 15200, image: 'https://placehold.co/400x400/F59E0B/FFFFFF?text=Nike+Air+Max', description: 'Nike\'s first lifestyle Air Max brings you style, comfort and big attitude. Showcasing Nike\'s greatest innovation.', specs: ['Large volume Max Air unit', 'Knit fabric on the upper', 'Foam midsole'] },
-        { id: 6, name: 'Adidas Ultraboost 22', category: 'Fashion', price: 17999, rating: 4.7, reviews: 9800, image: 'https://placehold.co/400x400/0EA5E9/FFFFFF?text=Adidas+Shoes', description: 'Experience epic energy with the new Ultraboost 22. The 360° fit improvement gives you a more responsive ride.', specs: ['BOOST midsole', 'Linear Energy Push system', 'Made with Parley Ocean Plastic'] },
+        { id: 17, name: 'Levis Mens T-Shirt', category: 'Fashion', subCategory: "Men's Wear", price: 899, rating: 4.4, reviews: 5400, image: 'https://placehold.co/400x400/2563EB/FFFFFF?text=Mens+T-Shirt', description: 'Classic crew-neck t-shirt made from pure cotton.', specs: ['100% Cotton', 'Regular Fit', 'Crew Neck'] },
         { id: 9, name: 'L\'Oréal Paris Revitalift Serum', category: 'Beauty', price: 799, rating: 4.5, reviews: 18000, image: 'https://placehold.co/400x400/D946EF/FFFFFF?text=Serum', description: 'A highly concentrated, anti-aging serum for visibly smoother and more radiant skin.', specs: ['1.5% Hyaluronic Acid', 'For all skin types', 'Dermatologically tested'] },
-        { id: 10, name: 'Maybelline SuperStay Matte Ink', category: 'Beauty', price: 650, rating: 4.4, reviews: 35000, image: 'https://placehold.co/400x400/F472B6/FFFFFF?text=Lipstick', description: 'Ink your lips in up to 16 HR saturated liquid matte. SuperStay Matte Ink features a unique arrow applicator for precise application.', specs: ['16-hour wear', 'Intense matte finish', 'Smudge-proof'] },
-        { id: 4, name: 'The Psychology of Money', category: 'Books', price: 450, rating: 4.6, reviews: 25000, image: 'https://placehold.co/400x400/8B5CF6/FFFFFF?text=Book', description: 'Timeless lessons on wealth, greed, and happiness. It’s about how you behave.', specs: ['Author: Morgan Housel', 'Paperback', '252 pages'] },
         { id: 5, name: 'Samsung 55" QLED 4K TV', category: 'Appliances', price: 79990, rating: 4.6, reviews: 6700, image: 'https://placehold.co/400x400/EF4444/FFFFFF?text=Samsung+TV', description: 'A billion shades of color with Quantum Dot. A wider range of contrast in cinematic scale.', specs: ['Quantum Processor 4K', '100% Color Volume', 'Smart TV powered by Tizen'] },
+        
+        // Products for the "Blockbuster Deals" section
+        { id: 7, name: 'Samsung Galaxy S23 Ultra', category: 'Mobiles', price: 124999, rating: 4.8, reviews: 9500, image: 'https://placehold.co/400x400/1F2937/FFFFFF?text=Galaxy+S23', description: 'The epic standard in mobile. With the fastest mobile processor and an incredible camera system.', specs: ['Snapdragon 8 Gen 2 for Galaxy', '200MP Main Camera', 'Built-in S Pen'] },
+        { id: 6, name: 'Adidas Ultraboost 22', category: 'Fashion', subCategory: 'Shoes', price: 17999, rating: 4.7, reviews: 9800, image: 'https://placehold.co/400x400/0EA5E9/FFFFFF?text=Adidas+Shoes', description: 'Experience epic energy with the new Ultraboost 22. The 360° fit improvement gives you a more responsive ride.', specs: ['BOOST midsole', 'Linear Energy Push system', 'Made with Parley Ocean Plastic'] },
+        { id: 4, name: 'The Psychology of Money', category: 'Books', price: 450, rating: 4.6, reviews: 25000, image: 'https://placehold.co/400x400/8B5CF6/FFFFFF?text=Book', description: 'Timeless lessons on wealth, greed, and happiness. It’s about how you behave.', specs: ['Author: Morgan Housel', 'Paperback', '252 pages'] },
+        { id: 10, name: 'Maybelline SuperStay Matte Ink', category: 'Beauty', price: 650, rating: 4.4, reviews: 35000, image: 'https://placehold.co/400x400/F472B6/FFFFFF?text=Lipstick', description: 'Ink your lips in up to 16 HR saturated liquid matte. SuperStay Matte Ink features a unique arrow applicator for precise application.', specs: ['16-hour wear', 'Intense matte finish', 'Smudge-proof'] },
+        { id: 8, name: 'OnePlus 11 5G', category: 'Mobiles', price: 56999, rating: 4.6, reviews: 7800, image: 'https://placehold.co/400x400/DC2626/FFFFFF?text=OnePlus+11', description: 'The Shape of Power. Experience the power of a flagship processor with up to 16GB of RAM.', specs: ['Snapdragon 8 Gen 2', '3rd Gen Hasselblad Camera', '120 Hz Super Fluid AMOLED'] },
+        
+        // Products for the "Suggested For You" section
+        { id: 11, name: 'Google Pixel 7 Pro', category: 'Mobiles', price: 84999, rating: 4.7, reviews: 6500, image: 'https://placehold.co/400x400/7C3AED/FFFFFF?text=Pixel+7+Pro', description: 'The all-pro Google phone. Powered by Google Tensor G2, it\'s fast and secure, with an amazing battery and camera.', specs: ['Google Tensor G2', '6.7-inch LTPO QHD+ display', '5x telephoto lens'] },
+        { id: 12, name: 'Boat Airdopes 141', category: 'Electronics', price: 1299, rating: 4.1, reviews: 150000, image: 'https://placehold.co/400x400/6366F1/FFFFFF?text=Boat+Airdopes', description: 'Enjoy an extended break on weekends with your favourite episodes on stream, virtue of a playback time of up to 42 hours including the 6 hours nonstop playtime for earbuds.', specs: ['42H Playtime', 'ENx™ Technology', 'ASAP™ Charge'] },
+        { id: 18, name: 'Zara Womens Dress', category: 'Fashion', subCategory: "Women's Wear", price: 2999, rating: 4.6, reviews: 3200, image: 'https://placehold.co/400x400/DB2777/FFFFFF?text=Womens+Dress', description: 'A beautiful floral print dress for any occasion.', specs: ['Viscose Blend', 'Midi Length', 'V-Neck'] },
+        { id: 14, name: 'Philips Steam Iron', category: 'Appliances', price: 1499, rating: 4.3, reviews: 18000, image: 'https://placehold.co/400x400/34D399/FFFFFF?text=Iron', description: 'This steam iron is specially designed for a seamless ironing experience. It has a non-stick soleplate for easy gliding on all fabrics.', specs: ['1440 Watts', 'Non-stick soleplate', 'Steam boost'] },
+        { id: 19, name: 'Fossil Mens Watch', category: 'Fashion', subCategory: 'Watches', price: 8995, rating: 4.7, reviews: 9800, image: 'https://placehold.co/400x400/374151/FFFFFF?text=Mens+Watch', description: 'A timeless chronograph watch with a leather strap.', specs: ['Stainless Steel Case', 'Leather Strap', 'Water Resistant'] },
+        { id: 3, name: 'Nike Air Max 270', category: 'Fashion', subCategory: 'Shoes', price: 12995, rating: 4.5, reviews: 15200, image: 'https://placehold.co/400x400/F59E0B/FFFFFF?text=Nike+Air+Max', description: 'Nike\'s first lifestyle Air Max brings you style, comfort and big attitude. Showcasing Nike\'s greatest innovation.', specs: ['Large volume Max Air unit', 'Knit fabric on the upper', 'Foam midsole'] },
     ];
     
     const getMockUsers = () => [
@@ -45,6 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const signupPage = document.getElementById('signup-page');
     const profilePage = document.getElementById('profile-page');
     const ordersPage = document.getElementById('orders-page');
+    const fashionPage = document.getElementById('fashion-page');
 
     // Forms
     const searchForm = document.getElementById('search-form');
@@ -83,7 +94,6 @@ document.addEventListener('DOMContentLoaded', () => {
         `;
         headerNav.innerHTML = html;
 
-        // Re-attach event listeners for login/cart buttons if they are re-rendered
         if (!state.currentUser) {
             document.getElementById('login-btn').addEventListener('click', () => navigateTo('login'));
         }
@@ -110,8 +120,27 @@ document.addEventListener('DOMContentLoaded', () => {
     };
     
     const renderHomePage = () => {
-        const grid = document.getElementById('home-product-grid');
-        grid.innerHTML = state.products.slice(0, 10).map(renderProductCard).join('');
+        const blockbusterGrid = document.getElementById('blockbuster-deals-grid');
+        blockbusterGrid.innerHTML = state.products.slice(5, 10).map(renderProductCard).join('');
+
+        const suggestedGrid = document.getElementById('suggested-deals-grid');
+        suggestedGrid.innerHTML = state.products.slice(10, 16).map(renderProductCard).join('');
+
+        const featuredGrid = document.getElementById('home-product-grid');
+        featuredGrid.innerHTML = state.products.slice(0, 5).map(renderProductCard).join('');
+    };
+
+    const renderFashionPage = (subCategory = null) => {
+        const fashionGrid = document.getElementById('fashion-product-grid');
+        let fashionProducts;
+
+        if (subCategory) {
+            fashionProducts = state.products.filter(p => p.subCategory === subCategory);
+        } else {
+            fashionProducts = state.products.filter(p => p.category === 'Fashion');
+        }
+        
+        fashionGrid.innerHTML = fashionProducts.map(renderProductCard).join('');
     };
     
     const renderProductListPage = (products, title) => {
@@ -134,7 +163,7 @@ document.addEventListener('DOMContentLoaded', () => {
         productDetailPage.innerHTML = `
             <div>
                 <div class="mb-4">
-                    <button id="back-to-list-btn" class="bg-blue-500 text-white font-semibold py-2 px-4 rounded-lg hover:bg-blue-600 transition-colors flex items-center space-x-2">
+                    <button class="back-btn bg-blue-500 text-white font-semibold py-2 px-4 rounded-lg hover:bg-blue-600 transition-colors flex items-center space-x-2">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
                         <span>Back to Products</span>
                     </button>
@@ -276,8 +305,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- LOGIC & HANDLERS ---
     
     const navigateTo = (page, data = null) => {
-        if (page === 'home' || page === 'productList') {
-            state.lastProductListPage = { page, data };
+        // Before navigating away, store the current view if it's one we can go back to.
+        if (['home', 'fashion', 'productList'].includes(state.currentPage)) {
+            state.lastProductListPage = { page: state.currentPage, data: state.currentPageData };
         }
 
         state.currentPage = page;
@@ -291,6 +321,10 @@ document.addEventListener('DOMContentLoaded', () => {
             case 'home':
                 homePage.classList.add('active');
                 pageRenderFunction = renderHomePage;
+                break;
+            case 'fashion':
+                fashionPage.classList.add('active');
+                pageRenderFunction = () => renderFashionPage(data ? data.subCategory : null);
                 break;
             case 'productList':
                 productListPage.classList.add('active');
@@ -420,46 +454,33 @@ document.addEventListener('DOMContentLoaded', () => {
         navigateTo('login');
     });
 
-    document.getElementById('back-to-home-btn').addEventListener('click', () => {
-        navigateTo('home');
-    });
-
     // Event delegation for dynamically created elements
     document.body.addEventListener('click', (e) => {
-        // User dropdown actions (Profile, Orders, Logout)
-        const userAction = e.target.dataset.action;
-        if (userAction) {
-            e.preventDefault();
-            switch (userAction) {
-                case 'profile':
-                    navigateTo('profile');
-                    break;
-                case 'orders':
-                    navigateTo('orders');
-                    break;
-                case 'logout':
-                    handleLogout();
-                    break;
-            }
-            return;
-        }
-
-        // Back button on the product detail page
-        const backToListBtn = e.target.closest('#back-to-list-btn');
-        if (backToListBtn) {
+        // Handle all back buttons
+        const backBtn = e.target.closest('.back-btn');
+        if (backBtn) {
             const lastView = state.lastProductListPage;
             navigateTo(lastView.page, lastView.data);
             return;
         }
 
-        // Continue shopping button on orders page
+        const userAction = e.target.dataset.action;
+        if (userAction) {
+            e.preventDefault();
+            switch (userAction) {
+                case 'profile': navigateTo('profile'); break;
+                case 'orders': navigateTo('orders'); break;
+                case 'logout': handleLogout(); break;
+            }
+            return;
+        }
+
         const continueShoppingBtn = e.target.closest('#continue-shopping-btn');
         if (continueShoppingBtn) {
             navigateTo('home');
             return;
         }
 
-        // Product card click
         const productCard = e.target.closest('.product-card');
         if (productCard) {
             const productId = parseInt(productCard.dataset.id);
@@ -467,7 +488,6 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
-        // Add to cart button on detail page
         const addToCartBtn = e.target.closest('.add-to-cart-btn');
         if (addToCartBtn) {
             const productId = parseInt(addToCartBtn.dataset.id);
@@ -476,7 +496,6 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
-        // Remove from cart button
         const removeFromCartBtn = e.target.closest('.remove-from-cart-btn');
         if (removeFromCartBtn) {
             const productId = parseInt(removeFromCartBtn.dataset.id);
@@ -484,12 +503,25 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
-        // Category navigation
         const categoryNav = e.target.closest('.category-nav');
         if (categoryNav) {
             const category = categoryNav.dataset.category;
-            const results = state.products.filter(p => p.category === category);
-            navigateTo('productList', { products: results, title: `${category}` });
+            if (category === 'Fashion') {
+                navigateTo('fashion');
+            } else {
+                const results = state.products.filter(p => p.category === category);
+                navigateTo('productList', { products: results, title: `${category}` });
+            }
+            return;
+        }
+
+        const subCategoryLink = e.target.closest('.fashion-subcategory-link');
+        if (subCategoryLink) {
+            e.preventDefault();
+            const subCategory = subCategoryLink.dataset.subcategory;
+            const results = state.products.filter(p => p.subCategory === subCategory);
+            navigateTo('productList', { products: results, title: `Fashion - ${subCategory}` });
+            return;
         }
     });
 
