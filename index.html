@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrueCart - Your Online Shopping Destination</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Link to your external CSS file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- 
+      ======================================
+      HEADER
+      ======================================
+    -->
+    <header class="bg-blue-600 text-white shadow-md sticky top-0 z-40">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center space-x-8">
+                    <h1 id="logo" class="text-2xl font-extrabold italic cursor-pointer">TrueCart</h1>
+                    <form id="search-form" class="hidden md:flex items-center bg-white rounded-md w-96">
+                        <input
+                            type="text"
+                            id="search-input"
+                            placeholder="Search for products, brands and more"
+                            class="w-full py-2 px-4 text-gray-700 rounded-l-md focus:outline-none"
+                        />
+                        <button type="submit" class="p-2 text-blue-600">
+                            <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                        </button>
+                    </form>
+                </div>
+                <div id="header-nav" class="flex items-center space-x-4 sm:space-x-8">
+                    <!-- Dynamic content will be injected here by JS -->
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mx-auto p-4 sm:p-6 lg:p-8">
+
+        <!-- 
+          ======================================
+          HOME PAGE
+          ======================================
+        -->
+        <div id="home-page" class="page active">
+            <div class="bg-white p-4 rounded-lg shadow-sm mb-6">
+                 <div class="flex flex-wrap justify-around items-center text-center gap-4">
+                    <div class="cursor-pointer category-nav" data-category="Mobiles">
+                        <img src="https://placehold.co/100x100/22C55E/FFFFFF?text=Mobiles" alt="Mobiles" class="w-16 h-16 mx-auto rounded-full">
+                        <p class="mt-2 font-semibold text-gray-800">Mobiles</p>
+                    </div>
+                    <div class="cursor-pointer category-nav" data-category="Laptops">
+                        <img src="https://placehold.co/100x100/38BDF8/FFFFFF?text=Laptops" alt="Laptops" class="w-16 h-16 mx-auto rounded-full">
+                        <p class="mt-2 font-semibold text-gray-800">Laptops</p>
+                    </div>
+                    <div class="cursor-pointer category-nav" data-category="Electronics">
+                        <img src="https://placehold.co/100x100/3B82F6/FFFFFF?text=Electronics" alt="Electronics" class="w-16 h-16 mx-auto rounded-full">
+                        <p class="mt-2 font-semibold text-gray-800">Electronics</p>
+                    </div>
+                    <div class="cursor-pointer category-nav" data-category="Fashion">
+                        <img src="https://placehold.co/100x100/F59E0B/FFFFFF?text=Fashion" alt="Fashion" class="w-16 h-16 mx-auto rounded-full">
+                        <p class="mt-2 font-semibold text-gray-800">Fashion</p>
+                    </div>
+                     <div class="cursor-pointer category-nav" data-category="Appliances">
+                        <img src="https://placehold.co/100x100/EF4444/FFFFFF?text=Appliances" alt="Appliances" class="w-16 h-16 mx-auto rounded-full">
+                        <p class="mt-2 font-semibold text-gray-800">Appliances</p>
+                    </div>
+                    <div class="cursor-pointer category-nav" data-category="Beauty">
+                        <img src="https://placehold.co/100x100/EC4899/FFFFFF?text=Beauty" alt="Beauty" class="w-16 h-16 mx-auto rounded-full">
+                        <p class="mt-2 font-semibold text-gray-800">Beauty</p>
+                    </div>
+                    <div class="cursor-pointer category-nav" data-category="Books">
+                        <img src="https://placehold.co/100x100/8B5CF6/FFFFFF?text=Books" alt="Books" class="w-16 h-16 mx-auto rounded-full">
+                        <p class="mt-2 font-semibold text-gray-800">Books</p>
+                    </div>
+                </div>
+            </div>
+            
+            <h2 class="text-2xl font-bold text-gray-800 mt-8 mb-4">Blockbuster Deals</h2>
+            <div id="blockbuster-deals-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
+                <!-- Blockbuster deals will be injected here by JS -->
+            </div>
+
+            <h2 class="text-2xl font-bold text-gray-800 mt-8 mb-4">Suggested For You</h2>
+            <div id="suggested-deals-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
+                <!-- Suggested deals will be injected here by JS -->
+            </div>
+
+            <h2 class="text-2xl font-bold text-gray-800 mt-8 mb-4">Featured Products</h2>
+            <div id="home-product-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
+                <!-- Products will be injected here by JS -->
+            </div>
+        </div>
+
+        <!-- 
+          ======================================
+          MOBILES LANDING PAGE
+          ======================================
+        -->
+        <div id="mobiles-page" class="page">
+            <div class="flex items-center justify-between mb-4">
+                <h2 class="text-3xl font-bold text-gray-800">Mobiles & Tablets</h2>
+                 <button class="back-btn bg-blue-500 text-white font-semibold py-2 px-4 rounded-lg hover:bg-blue-600 transition-colors flex items-center space-x-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+                    <span>Back</span>
+                </button>
+            </div>
+            <div class="mb-6 bg-white p-4 rounded-lg shadow-sm">
+                <h3 class="text-xl font-semibold text-gray-700 mb-4 text-center">Shop by Brand</h3>
+                <div class="grid grid-cols-4 md:grid-cols-8 gap-4">
+                    <a href="#" class="brand-link flex flex-col items-center justify-center p-2 rounded-lg hover:bg-gray-100" data-brand="Apple" data-category="Mobiles"><img src="https://placehold.co/80x80/000000/FFFFFF?text=Apple" class="h-16 w-16 object-contain"><span class="text-sm mt-2 font-medium">Apple</span></a>
+                    <a href="#" class="brand-link flex flex-col items-center justify-center p-2 rounded-lg hover:bg-gray-100" data-brand="Samsung" data-category="Mobiles"><img src="https://placehold.co/80x80/1428A0/FFFFFF?text=Samsung" class="h-16 w-16 object-contain"><span class="text-sm mt-2 font-medium">Samsung</span></a>
+                    <a href="#" class="brand-link flex flex-col items-center justify-center p-2 rounded-lg hover:bg-gray-100" data-brand="OnePlus" data-category="Mobiles"><img src="https://placehold.co/80x80/F05245/FFFFFF?text=OnePlus" class="h-16 w-16 object-contain"><span class="text-sm mt-2 font-medium">OnePlus</span></a>
+                    <a href="#" class="brand-link flex flex-col items-center justify-center p-2 rounded-lg hover:bg-gray-100" data-brand="Pixel" data-category="Mobiles"><img src="https://placehold.co/80x80/4285F4/FFFFFF?text=Pixel" class="h-16 w-16 object-contain"><span class="text-sm mt-2 font-medium">Pixel</span></a>
+                    <a href="#" class="brand-link flex flex-col items-center justify-center p-2 rounded-lg hover:bg-gray-100" data-brand="Vivo" data-category="Mobiles"><img src="https://placehold.co/80x80/0052D4/FFFFFF?text=Vivo" class="h-16 w-16 object-contain"><span class="text-sm mt-2 font-medium">Vivo</span></a>
+                    <a href="#" class="brand-link flex flex-col items-center justify-center p-2 rounded-lg hover:bg-gray-100" data-brand="Realme" data-category="Mobiles"><img src="https://placehold.co/80x80/FFC107/000000?text=Realme" class="h-16 w-16 object-contain"><span class="text-sm mt-2 font-medium">Realme</span></a>
+                    <a href="#" class="brand-link flex flex-col items-center justify-center p-2 rounded-lg hover:bg-gray-100" data-brand="Oppo" data-category="Mobiles"><img src="https://placehold.co/80x80/00A170/FFFFFF?text=Oppo" class="h-16 w-16 object-contain"><span class="text-sm mt-2 font-medium">Oppo</span></a>
+                    <a href="#" class="brand-link flex flex-col items-center justify-center p-2 rounded-lg hover:bg-gray-100" data-brand="Motorola" data-category="Mobiles"><img src="https://placehold.co/80x80/00A9E0/FFFFFF?text=Motorola" class="h-16 w-16 object-contain"><span class="text-sm mt-2 font-medium">Motorola</span></a>
+                </div>
+            </div>
+            <div id="mobiles-product-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
+                <!-- All mobile products will be injected here by JS -->
+            </div>
+        </div>
+
+        <!-- 
+          ======================================
+          LAPTOPS LANDING PAGE
+          ======================================
+        -->
+        <div id="laptops-page" class="page">
+            <div class="flex items-center justify-between mb-4">
+                <h2 class="text-3xl font-bold text-gray-800">Laptops</h2>
+                 <button class="back-btn bg-blue-500 text-white font-semibold py-2 px-4 rounded-lg hover:bg-blue-600 transition-colors flex items-center space-x-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+                    <span>Back</span>
+                </button>
+            </div>
+            <div class="mb-6 bg-white p-4 rounded-lg shadow-sm">
+                <h3 class="text-xl font-semibold text-gray-700 mb-4 text-center">Shop by Brand</h3>
+                <div class="grid grid-cols-3 md:grid-cols-6 gap-4">
+                    <a href="#" class="brand-link flex flex-col items-center justify-center p-2 rounded-lg hover:bg-gray-100" data-brand="Apple" data-category="Laptops"><img src="https://placehold.co/80x80/000000/FFFFFF?text=Apple" class="h-16 w-16 object-contain"><span class="text-sm mt-2 font-medium">Apple</span></a>
+                    <a href="#" class="brand-link flex flex-col items-center justify-center p-2 rounded-lg hover:bg-gray-100" data-brand="Dell" data-category="Laptops"><img src="https://placehold.co/80x80/007DB8/FFFFFF?text=Dell" class="h-16 w-16 object-contain"><span class="text-sm mt-2 font-medium">Dell</span></a>
+                    <a href="#" class="brand-link flex flex-col items-center justify-center p-2 rounded-lg hover:bg-gray-100" data-brand="HP" data-category="Laptops"><img src="https://placehold.co/80x80/0096D6/FFFFFF?text=HP" class="h-16 w-16 object-contain"><span class="text-sm mt-2 font-medium">HP</span></a>
+                    <a href="#" class="brand-link flex flex-col items-center justify-center p-2 rounded-lg hover:bg-gray-100" data-brand="Lenovo" data-category="Laptops"><img src="https://placehold.co/80x80/E2231A/FFFFFF?text=Lenovo" class="h-16 w-16 object-contain"><span class="text-sm mt-2 font-medium">Lenovo</span></a>
+                    <a href="#" class="brand-link flex flex-col items-center justify-center p-2 rounded-lg hover:bg-gray-100" data-brand="Asus" data-category="Laptops"><img src="https://placehold.co/80x80/00529B/FFFFFF?text=Asus" class="h-16 w-16 object-contain"><span class="text-sm mt-2 font-medium">Asus</span></a>
+                    <a href="#" class="brand-link flex flex-col items-center justify-center p-2 rounded-lg hover:bg-gray-100" data-brand="Acer" data-category="Laptops"><img src="https://placehold.co/80x80/83B81A/FFFFFF?text=Acer" class="h-16 w-16 object-contain"><span class="text-sm mt-2 font-medium">Acer</span></a>
+                </div>
+            </div>
+            <div id="laptops-product-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
+                <!-- All laptop products will be injected here by JS -->
+            </div>
+        </div>
+
+        <!-- 
+          ======================================
+          ELECTRONICS LANDING PAGE
+          ======================================
+        -->
+        <div id="electronics-page" class="page">
+            <div class="flex items-center justify-between mb-4">
+                <h2 class="text-3xl font-bold text-gray-800">Electronics</h2>
+                 <button class="back-btn bg-blue-500 text-white font-semibold py-2 px-4 rounded-lg hover:bg-blue-600 transition-colors flex items-center space-x-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+                    <span>Back</span>
+                </button>
+            </div>
+            <div class="mb-6">
+                <!-- Sub-category navigation bar -->
+                <div class="bg-white p-3 rounded-lg shadow-sm flex justify-around items-center">
+                    <a href="#" class="electronics-subcategory-link font-semibold text-gray-700 hover:text-blue-600" data-subcategory="EarBuds">EarBuds</a>
+                    <a href="#" class="electronics-subcategory-link font-semibold text-gray-700 hover:text-blue-600" data-subcategory="Chargers">Chargers</a>
+                    <a href="#" class="electronics-subcategory-link font-semibold text-gray-700 hover:text-blue-600" data-subcategory="CCTV Cameras">CCTV Cameras</a>
+                    <a href="#" class="electronics-subcategory-link font-semibold text-gray-700 hover:text-blue-600" data-subcategory="Cables">Cables</a>
+                </div>
+            </div>
+            <!-- Grid to show all electronics products initially -->
+            <div id="electronics-product-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
+                <!-- Electronics products will be injected here by JS -->
+            </div>
+        </div>
+
+
+        <!-- 
+          ======================================
+          FASHION LANDING PAGE
+          ======================================
+        -->
+        <div id="fashion-page" class="page">
+            <div class="flex items-center justify-between mb-4">
+                <h2 class="text-3xl font-bold text-gray-800">Fashion</h2>
+                <button class="back-btn bg-blue-500 text-white font-semibold py-2 px-4 rounded-lg hover:bg-blue-600 transition-colors flex items-center space-x-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+                    <span>Back</span>
+                </button>
+            </div>
+            <div class="mb-6">
+                <!-- Sub-category navigation bar -->
+                <div class="bg-white p-3 rounded-lg shadow-sm flex justify-around items-center">
+                    <a href="#" class="fashion-subcategory-link font-semibold text-gray-700 hover:text-blue-600" data-subcategory="Men's Wear">Men's Wear</a>
+                    <a href="#" class="fashion-subcategory-link font-semibold text-gray-700 hover:text-blue-600" data-subcategory="Women's Wear">Women's Wear</a>
+                    <a href="#" class="fashion-subcategory-link font-semibold text-gray-700 hover:text-blue-600" data-subcategory="Shoes">Shoes</a>
+                    <a href="#" class="fashion-subcategory-link font-semibold text-gray-700 hover:text-blue-600" data-subcategory="Watches">Watches</a>
+                </div>
+            </div>
+            <!-- Grid to show all fashion products initially -->
+            <div id="fashion-product-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
+                <!-- Fashion products will be injected here by JS -->
+            </div>
+        </div>
+
+        <!-- 
+          ======================================
+          APPLIANCES LANDING PAGE
+          ======================================
+        -->
+        <div id="appliances-page" class="page">
+            <div class="flex items-center justify-between mb-4">
+                <h2 class="text-3xl font-bold text-gray-800">Appliances</h2>
+                 <button class="back-btn bg-blue-500 text-white font-semibold py-2 px-4 rounded-lg hover:bg-blue-600 transition-colors flex items-center space-x-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+                    <span>Back</span>
+                </button>
+            </div>
+            <div class="mb-6">
+                <!-- Sub-category navigation bar -->
+                <div class="bg-white p-3 rounded-lg shadow-sm flex justify-around items-center">
+                    <a href="#" class="appliances-subcategory-link font-semibold text-gray-700 hover:text-blue-600" data-subcategory="TV's">TV's</a>
+                    <a href="#" class="appliances-subcategory-link font-semibold text-gray-700 hover:text-blue-600" data-subcategory="Washing Machines">Washing Machines</a>
+                    <a href="#" class="appliances-subcategory-link font-semibold text-gray-700 hover:text-blue-600" data-subcategory="Iron Box">Iron Box</a>
+                    <a href="#" class="appliances-subcategory-link font-semibold text-gray-700 hover:text-blue-600" data-subcategory="Fridges">Fridges</a>
+                </div>
+            </div>
+            <!-- Grid to show all appliances products initially -->
+            <div id="appliances-product-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
+                <!-- Appliances products will be injected here by JS -->
+            </div>
+        </div>
+
+        <!-- 
+          ======================================
+          BEAUTY LANDING PAGE
+          ======================================
+        -->
+        <div id="beauty-page" class="page">
+            <div class="flex items-center justify-between mb-4">
+                <h2 class="text-3xl font-bold text-gray-800">Beauty</h2>
+                 <button class="back-btn bg-blue-500 text-white font-semibold py-2 px-4 rounded-lg hover:bg-blue-600 transition-colors flex items-center space-x-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+                    <span>Back</span>
+                </button>
+            </div>
+            <div class="mb-6">
+                <!-- Sub-category navigation bar -->
+                <div class="bg-white p-3 rounded-lg shadow-sm flex justify-around items-center">
+                    <a href="#" class="beauty-subcategory-link font-semibold text-gray-700 hover:text-blue-600" data-subcategory="Make Up">Make Up</a>
+                    <a href="#" class="beauty-subcategory-link font-semibold text-gray-700 hover:text-blue-600" data-subcategory="Skin Care">Skin Care</a>
+                    <a href="#" class="beauty-subcategory-link font-semibold text-gray-700 hover:text-blue-600" data-subcategory="Hair Care">Hair Care</a>
+                    <a href="#" class="beauty-subcategory-link font-semibold text-gray-700 hover:text-blue-600" data-subcategory="Perfumes">Perfumes</a>
+                </div>
+            </div>
+            <!-- Grid to show all beauty products initially -->
+            <div id="beauty-product-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
+                <!-- Beauty products will be injected here by JS -->
+            </div>
+        </div>
+
+        <!-- 
+          ======================================
+          BOOKS LANDING PAGE
+          ======================================
+        -->
+        <div id="books-page" class="page">
+            <div class="flex items-center justify-between mb-4">
+                <h2 class="text-3xl font-bold text-gray-800">Books</h2>
+                 <button class="back-btn bg-blue-500 text-white font-semibold py-2 px-4 rounded-lg hover:bg-blue-600 transition-colors flex items-center space-x-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+                    <span>Back</span>
+                </button>
+            </div>
+            <div class="mb-6">
+                <!-- Sub-category navigation bar -->
+                <div class="bg-white p-3 rounded-lg shadow-sm flex justify-around items-center">
+                    <a href="#" class="books-subcategory-link font-semibold text-gray-700 hover:text-blue-600" data-subcategory="History">History</a>
+                    <a href="#" class="books-subcategory-link font-semibold text-gray-700 hover:text-blue-600" data-subcategory="Geography">Geography</a>
+                    <a href="#" class="books-subcategory-link font-semibold text-gray-700 hover:text-blue-600" data-subcategory="Stories">Stories</a>
+                    <a href="#" class="books-subcategory-link font-semibold text-gray-700 hover:text-blue-600" data-subcategory="Others">Others</a>
+                </div>
+            </div>
+            <!-- Grid to show all books products initially -->
+            <div id="books-product-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
+                <!-- Books products will be injected here by JS -->
+            </div>
+        </div>
+
+        <!-- 
+          ======================================
+          PRODUCT LISTING PAGE (FOR SEARCH/CATEGORY)
+          ======================================
+        -->
+        <div id="product-list-page" class="page">
+             <div class="flex items-center justify-between mb-4">
+                <h2 id="product-list-title" class="text-2xl font-bold text-gray-800">Search Results</h2>
+                <button class="back-btn bg-blue-500 text-white font-semibold py-2 px-4 rounded-lg hover:bg-blue-600 transition-colors flex items-center space-x-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+                    <span>Back</span>
+                </button>
+             </div>
+             <div id="product-list-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
+                <!-- Products will be injected here by JS -->
+            </div>
+        </div>
+
+        <!-- 
+          ======================================
+          PRODUCT DETAIL PAGE
+          ======================================
+        -->
+        <div id="product-detail-page" class="page">
+            <!-- Product detail content will be injected here by JS -->
+        </div>
+
+        <!-- 
+          ======================================
+          CART PAGE
+          ======================================
+        -->
+        <div id="cart-page" class="page">
+            <!-- Cart content will be injected here by JS -->
+        </div>
+
+        <!-- 
+          ======================================
+          PROFILE PAGE
+          ======================================
+        -->
+        <div id="profile-page" class="page">
+            <!-- Profile content will be injected here by JS -->
+        </div>
+
+        <!-- 
+          ======================================
+          ORDERS PAGE
+          ======================================
+        -->
+        <div id="orders-page" class="page">
+            <!-- Orders content will be injected here by JS -->
+        </div>
+        
+        <!-- 
+          ======================================
+          LOGIN PAGE
+          ======================================
+        -->
+        <div id="login-page" class="page">
+            <div class="max-w-md mx-auto bg-white p-8 rounded-lg shadow-md mt-10">
+                <h2 class="text-2xl font-bold text-center text-gray-800 mb-6">Login</h2>
+                <form id="login-form">
+                    <div class="mb-4">
+                        <label for="login-email" class="block text-gray-700 text-sm font-bold mb-2">Email</label>
+                        <input type="email" id="login-email" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required value="user@example.com">
+                    </div>
+                    <div class="mb-6">
+                        <label for="login-password" class="block text-gray-700 text-sm font-bold mb-2">Password</label>
+                        <input type="password" id="login-password" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" required value="password123">
+                    </div>
+                    <div id="login-error" class="text-red-500 text-sm mb-4"></div>
+                    <div class="flex items-center justify-between">
+                        <button class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">
+                            Sign In
+                        </button>
+                        <a id="show-signup" class="inline-block align-baseline font-bold text-sm text-blue-600 hover:text-blue-800" href="#">
+                            Create an Account
+                        </a>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- 
+          ======================================
+          SIGNUP PAGE
+          ======================================
+        -->
+        <div id="signup-page" class="page">
+            <div class="max-w-md mx-auto bg-white p-8 rounded-lg shadow-md mt-10">
+                <h2 class="text-2xl font-bold text-center text-gray-800 mb-6">Create Account</h2>
+                <form id="signup-form">
+                    <div class="mb-4">
+                        <label for="signup-name" class="block text-gray-700 text-sm font-bold mb-2">Full Name</label>
+                        <input type="text" id="signup-name" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required>
+                    </div>
+                    <div class="mb-4">
+                        <label for="signup-email" class="block text-gray-700 text-sm font-bold mb-2">Email</label>
+                        <input type="email" id="signup-email" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required>
+                    </div>
+                    <div class="mb-6">
+                        <label for="signup-password" class="block text-gray-700 text-sm font-bold mb-2">Password</label>
+                        <input type="password" id="signup-password" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" required>
+                    </div>
+                    <div id="signup-error" class="text-red-500 text-sm mb-4"></div>
+                    <div class="flex items-center justify-between">
+                        <button class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">
+                            Sign Up
+                        </button>
+                        <a id="show-login" class="inline-block align-baseline font-bold text-sm text-blue-600 hover:text-blue-800" href="#">
+                            Already have an account?
+                        </a>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </main>
+    
+    <!-- 
+      ======================================
+      FOOTER
+      ======================================
+    -->
+    <footer class="bg-gray-800 text-white mt-auto">
+        <div class="container mx-auto px-6 py-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="font-bold uppercase mb-4">About</h3>
+                    <ul>
+                        <li class="mt-2"><a href="#" class="hover:text-blue-400">About Us</a></li>
+                        <li class="mt-2"><a href="#" class="hover:text-blue-400">Careers</a></li>
+                        <li class="mt-2"><a href="#" class="hover:text-blue-400">Press</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-bold uppercase mb-4">Help</h3>
+                    <ul>
+                        <li class="mt-2"><a href="#" class="hover:text-blue-400">Payments</a></li>
+                        <li class="mt-2"><a href="#" class="hover:text-blue-400">Shipping</a></li>
+                        <li class="mt-2"><a href="#" class="hover:text-blue-400">FAQ</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-bold uppercase mb-4">Policy</h3>
+                    <ul>
+                        <li class="mt-2"><a href="#" class="hover:text-blue-400">Return Policy</a></li>
+                        <li class="mt-2"><a href="#" class="hover:text-blue-400">Terms of Use</a></li>
+                        <li class="mt-2"><a href="#" class="hover:text-blue-400">Privacy</a></li>
+                    </ul>
+                </div>
+                 <div>
+                    <h3 class="font-bold uppercase mb-4">Social</h3>
+                    <ul>
+                        <li class="mt-2"><a href="#" class="hover:text-blue-400">Facebook</a></li>
+                        <li class="mt-2"><a href="#" class="hover:text-blue-400">Twitter</a></li>
+                        <li class="mt-2"><a href="#" class="hover:text-blue-400">YouTube</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-6 text-center text-gray-400 text-sm">
+                &copy; 2024 TrueCart. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Link to your external JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>
